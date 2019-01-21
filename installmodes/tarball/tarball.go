@@ -10,6 +10,7 @@ package tarball
 
 import (
 	"fmt"
+	"os/exec"
 	"path"
 
 	"github.com/OSSystems/pkg/log"
@@ -129,7 +130,9 @@ func (tb *TarballObject) Install(downloadDir string) error {
 	errorList := []error{}
 
 	sourcePath := path.Join(downloadDir, tb.Sha256sum)
-	err = tb.LibArchiveBackend.Unpack(sourcePath, targetPath, false)
+
+	tar := exec.Command("tar", "xJf", sourcePath, "-C", targetPath)
+	err = tar.Run()
 	if err != nil {
 		errorList = append(errorList, err)
 	}

@@ -1,5 +1,5 @@
-hash: 50c75ccfdc5cd616c5b1929df38e21b7c2dbdc7b70f085b993ba47fb1e36d2f9
-updated: 2019-01-09T09:53:22.962868408-02:00
+hash: 2c2283082e7a1120ddbb9193a481570e1931b0d7364e04c912a6ea54dead9e6e
+updated: 2019-01-21T14:42:55.840183959-02:00
 imports:
 - name: github.com/anacrolix/missinggo
   version: f9a329340c5303f1977dcb9efb0918b34437a003
@@ -7,7 +7,7 @@ imports:
   - httptoo
   - mime
 - name: github.com/bouk/monkey
-  version: bdf6dea004c6fd1cdf4b25da8ad45a606c09409a
+  version: 199707c9f830fccfe1724c4f7d5a15165204376a
 - name: github.com/bradfitz/iter
   version: 454541ec3da2a73fc34fd049b19ee5777bf19345
 - name: github.com/c9s/goprocinfo
@@ -18,12 +18,22 @@ imports:
   version: 8991bc29aa16c548c550c7ff78260e27b9ab7c73
   subpackages:
   - spew
+- name: github.com/dsnet/compress
+  version: cc9eb1d7ad760af14e8f918698f745e80377af4f
+  subpackages:
+  - bzip2
+  - bzip2/internal/sais
+  - internal
+  - internal/errors
+  - internal/prefix
 - name: github.com/fatih/color
   version: 2d684516a8861da43017284349b7e303e809ac21
 - name: github.com/fsnotify/fsnotify
   version: c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9
 - name: github.com/go-ini/ini
   version: 6ed8d5f64cd79a498d1f3fab5880cc376ce41bbe
+- name: github.com/golang/snappy
+  version: 2e65f85255dbc3072edf28d6b5b8efc472979f5a
 - name: github.com/hokaccha/go-prettyjson
   version: d229c224a219dcf41e9d2af4684b9782f33f5eb7
 - name: github.com/huandu/xstrings
@@ -39,17 +49,25 @@ imports:
 - name: github.com/mattn/go-colorable
   version: efa589957cd060542a26d2dd7832fd6a6c6c3ade
 - name: github.com/mattn/go-isatty
-  version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
+  version: 3fb116b820352b7f0c281308a4d6250c22d94e27
 - name: github.com/mattn/go-shellwords
-  version: 02e3cf038dcea8290e44424da473dd12be796a8a
+  version: f8471b0a71ded0ab910825ee2cf230f25de000f1
+- name: github.com/mholt/archiver
+  version: d572b2e8b82726cee9476d1b9d63a7fe9b601ff1
 - name: github.com/moul/http2curl
   version: 9ac6cf4d929b2fa8fd2d2e6dec5bb0feb4f4911d
+- name: github.com/nwaples/rardecode
+  version: 197ef08ef68c4454ae5970a9c2692d6056ceb8d7
 - name: github.com/OSSystems/pkg
   version: 0c38fb3a1f0ffbf57cdcd47857ee8d2dc84af1ef
   subpackages:
   - log
 - name: github.com/parnurzeal/gorequest
   version: a578a48e8d6ca8b01a3b18314c43c6716bb5f5a3
+- name: github.com/pierrec/lz4
+  version: 623b5a2f4d2a41e411730dcdfbfdaeb5c0c4564e
+  subpackages:
+  - internal/xxh32
 - name: github.com/pkg/errors
   version: ba968bfe8b2f7e042a574c888954fccecfa385b4
 - name: github.com/pmezard/go-difflib
@@ -68,7 +86,7 @@ imports:
 - name: github.com/spf13/cobra
   version: ef82de70bb3f60c65fb8eebacbb2d122ef517385
 - name: github.com/spf13/pflag
-  version: 3ebe029320b2676d667ae88da602a5f854788a8a
+  version: 298182f68c66c05229eb03ac171abe6e309ee79a
 - name: github.com/stretchr/objx
   version: 0ab728f62c7f6fcd754334f7931c2dd659dce1d1
 - name: github.com/stretchr/testify
@@ -76,10 +94,18 @@ imports:
   subpackages:
   - assert
   - mock
+- name: github.com/ulikunitz/xz
+  version: 590df8077fbcb06ad62d7714da06c00e5dd2316d
+  subpackages:
+  - internal/hash
+  - internal/xlog
+  - lzma
 - name: github.com/UpdateHub/agent-sdk-go
   version: 4159d014cd88d05c76aa647fb1e63baba497c8fc
+- name: github.com/xi2/xz
+  version: 48954b6210f8d154cb5f8484d3a3e1f83489309e
 - name: golang.org/x/crypto
-  version: 7f39a6fea4fe9364fb61e1def6a268a51b4f3a06
+  version: 0c41d7ab0a0ee717d4590a44bcb987dfd9e183eb
   subpackages:
   - ssh/terminal
 - name: golang.org/x/net
@@ -87,12 +113,12 @@ imports:
   subpackages:
   - publicsuffix
 - name: golang.org/x/sys
-  version: ad87a3a340fa7f3bed189293fbfa7a9b7e021ae1
+  version: fa43e7bc11baaae89f3f902b2b4d832b68234844
   subpackages:
   - unix
   - windows
 - name: golang.org/x/text
-  version: 5cec4b58c438bd98288aeb248bab2c1840713d21
+  version: 4d1c5fb19474adfe9562c9847ba425e7da817e81
   subpackages:
   - transform
   - unicode/norm
